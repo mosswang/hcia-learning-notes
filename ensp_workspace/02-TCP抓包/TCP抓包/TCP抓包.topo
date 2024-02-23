@@ -1,7 +1,39 @@
 <?xml version="1.0" encoding="UNICODE" ?>
 <topo version="1.3.00.100">
-    <devices />
-    <lines />
+    <devices>
+        <dev id="062734E7-08FB-45c4-9F0A-5E7A8EC2FAD6" name="LSW1" poe="0" model="S3700" settings="" system_mac="4C-1F-CC-5A-57-F8" com_port="2000" bootmode="0" cx="573.000000" cy="373.000000" edit_left="600" edit_top="427">
+            <slot number="slot17" isMainBoard="1">
+                <interface sztype="Ethernet" interfacename="Ethernet" count="22" />
+                <interface sztype="Ethernet" interfacename="GE" count="2" />
+            </slot>
+        </dev>
+        <dev id="B33738FF-3901-4803-B175-B733A842A91E" name="Server1" poe="0" model="Server" settings="-domain 0 -eth 54-89-98-69-4F-F9 -ipaddr 192.168.1.100 -ipmask 255.255.255.0 -gateway 0.0.0.0 -ipv6addr 2000::2 -ipv6gateway 2000::1 -prefixlen 64 -ipv4dns 0.0.0.0 -ipv6dns 3000::1 -dnslist NULL" system_mac="54-89-98-69-4F-F9" com_port="0" bootmode="0" cx="773.000000" cy="373.000000" edit_left="800" edit_top="427">
+            <slot number="slot17" isMainBoard="1">
+                <interface sztype="Ethernet" interfacename="Ethernet" count="1" />
+            </slot>
+        </dev>
+        <dev id="E2B07A35-10DE-4f07-96EE-5377408EBF8E" name="PC1" poe="0" model="PC" settings=" -simpc_ip 192.168.1.1  -simpc_mask 0.0.0.0  -simpc_gateway 0.0.0.0  -simpc_mac 54-89-98-EF-67-88  -simpc_mc_dstip 0.0.0.0  -simpc_mc_dstmac 00-00-00-00-00-00  -simpc_dns1 255.255.255.0  -simpc_dns2 0.0.0.0  -simpc_ipv6 ::  -simpc_prefix 128  -simpc_gatewayv6 ::  -simpc_dhcp_state 0  -simpc_dhcpv6_state 0  -simpc_dns_auto_state 0  -simpc_igmp_version 1  -simpc_group_ip_start 0.0.0.0  -simpc_src_ip_start 0.0.0.0  -simpc_group_num 0  -simpc_group_step 0  -simpc_src_num 0  -simpc_src_step 0  -simpc_type MODE_IS_INCLUDE " system_mac="54-89-98-EF-67-88" com_port="0" bootmode="0" cx="373.000000" cy="273.000000" edit_left="400" edit_top="327">
+            <slot number="slot17" isMainBoard="1">
+                <interface sztype="Ethernet" interfacename="Ethernet" count="1" />
+            </slot>
+        </dev>
+        <dev id="2BDCB782-0FD2-4aa4-80DE-A6E5622025D7" name="Client1" poe="0" model="Client" settings="-domain 0 -eth 54-89-98-37-4D-8F -ipaddr 192.168.1.2 -ipmask 255.255.255.0 -gateway 0.0.0.0 -ipv6addr 2000::2 -ipv6gateway 2000::1 -prefixlen 64 -ipv4dns 0.0.0.0 -ipv6dns 3000::1 -dnslist NULL" system_mac="54-89-98-37-4D-8F" com_port="0" bootmode="0" cx="373.000000" cy="473.000000" edit_left="400" edit_top="527">
+            <slot number="slot17" isMainBoard="1">
+                <interface sztype="Ethernet" interfacename="Ethernet" count="1" />
+            </slot>
+        </dev>
+    </devices>
+    <lines>
+        <line srcDeviceID="E2B07A35-10DE-4f07-96EE-5377408EBF8E" destDeviceID="062734E7-08FB-45c4-9F0A-5E7A8EC2FAD6">
+            <interfacePair lineName="Copper" srcIndex="0" srcBoundRectIsMoved="0" srcBoundRect_X="438.624725" srcBoundRect_Y="319.312378" srcOffset_X="0.000000" srcOffset_Y="0.000000" tarIndex="0" tarBoundRectIsMoved="0" tarBoundRect_X="561.375244" tarBoundRect_Y="380.687622" tarOffset_X="0.000000" tarOffset_Y="0.000000" />
+        </line>
+        <line srcDeviceID="2BDCB782-0FD2-4aa4-80DE-A6E5622025D7" destDeviceID="062734E7-08FB-45c4-9F0A-5E7A8EC2FAD6">
+            <interfacePair lineName="Copper" srcIndex="0" srcBoundRectIsMoved="0" srcBoundRect_X="438.624725" srcBoundRect_Y="480.687622" srcOffset_X="0.000000" srcOffset_Y="0.000000" tarIndex="1" tarBoundRectIsMoved="0" tarBoundRect_X="561.375244" tarBoundRect_Y="419.312378" tarOffset_X="0.000000" tarOffset_Y="0.000000" />
+        </line>
+        <line srcDeviceID="062734E7-08FB-45c4-9F0A-5E7A8EC2FAD6" destDeviceID="B33738FF-3901-4803-B175-B733A842A91E">
+            <interfacePair lineName="Copper" srcIndex="2" srcBoundRectIsMoved="0" srcBoundRect_X="643.183777" srcBoundRect_Y="400.000000" srcOffset_X="0.000000" srcOffset_Y="0.000000" tarIndex="0" tarBoundRectIsMoved="0" tarBoundRect_X="756.816223" tarBoundRect_Y="400.000000" tarOffset_X="0.000000" tarOffset_Y="0.000000" />
+        </line>
+    </lines>
     <shapes />
     <txttips />
 </topo>
