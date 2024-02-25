@@ -1,0 +1,16 @@
+{
+  "name": "hcia-learning-notes",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "serve": "gitbook serve",
+    "build": "gitbook build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "ll"
+  },
+  "author": "",
+  "license": "ISC"
+}
